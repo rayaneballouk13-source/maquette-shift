@@ -1,0 +1,470 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="fr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SHIFT — Accompagnement de dirigeants &amp; équilibre</title>
+<!-- Google Fonts: Cormorant Garamond & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night: "#0A0F1F",
+            sand: "#F7F3EA",
+            sandCard: "#EFE9DC",
+            sandBorder: "#E2D9C8",
+            gold: "#D4AF6A",
+            goldHover: "#C49E57",
+            violetAccent: "#7B5BA8",
+            textDark: "#1A202C",
+            textMuted: "#4A5568",
+          },
+          fontFamily: {
+            serif: ["'Cormorant Garamond'", "Georgia", "serif"],
+            sans: ["'Inter'", "sans-serif"],
+          },
+          borderRadius: {
+            '2xl': '24px',
+            '3xl': '28px',
+            '4xl': '32px',
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    body {
+      background-color: #F7F3EA;
+      color: #1A202C;
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-gold/30 selection:text-night relative">
+<!-- Subtle tactile paper grain overlay for warm off-white tones -->
+<svg class="pointer-events-none fixed inset-0 z-40 h-full w-full opacity-[0.035]" xmlns="http://www.w3.org/2000/svg">
+<filter id="noiseFilter">
+<feTurbulence baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" type="fractalNoise"></feTurbulence>
+<feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
+</filter>
+<rect filter="url(#noiseFilter)" height="100%" width="100%"></rect>
+</svg>
+<!-- HEADER & NAVIGATION -->
+<header class="fixed top-0 inset-x-0 z-50 bg-[#0A0F1F]/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+<div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Gold SHIFT logo image -->
+<a class="flex items-center" href="#">
+<span class="font-serif text-2xl text-gold font-medium tracking-normal">SHIFT</span>
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8 text-[15px] font-normal text-white/80">
+<a class="hover:text-gold transition-colors" href="#mon-parcours">Mon parcours</a>
+<a class="hover:text-gold transition-colors" href="#la-methode">La méthode</a>
+<a class="hover:text-gold transition-colors" href="#accompagnements">Accompagnements</a>
+</nav>
+<!-- CTA Button -->
+<div class="hidden sm:flex items-center">
+<a class="bg-gold hover:bg-goldHover text-night font-medium text-[15px] px-8 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow" href="#contact">
+          Réserver un appel
+        </a>
+</div>
+<!-- Mobile Menu Trigger -->
+<a class="sm:hidden text-gold text-sm font-medium border border-gold/40 px-4 py-2 rounded-full" href="#contact">Réserver un appel</a>
+</div>
+</header>
+<!-- 1. HERO SECTION (Sunset landscape visible with 45% overlay + left-aligned content) -->
+<section class="relative min-h-[92vh] flex items-center pt-32 pb-24 px-6 overflow-hidden bg-night text-[#F7F3EA]">
+<!-- Background Image with Lightened 45% Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Coucher de soleil sur les montagnes" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/AEtjO1WXFm6Y2T-Q_DkIwu2omHfp2-QrN_pDX3C2U4qylPo324jrm_yKGwUYM4Ueb0btLHbcBqaOaBhDKwal1iwx8hARxYiguLiyQCLNhhiFUY36EKPFGE6oXHLt68UOr0uLx9QIUtK0x4ZFbA2_SrLJyjxaiTMzW-ezzOwOy_jhq_9-oM4y2v9zs6t6PHGLU4kqs6k6aRpciiFOqStr4GZMikMH0ylOJQH5g4PUF6DvkPqEmfiBzZBEH_LzYw">
+<div class="absolute inset-0 bg-[#0A0F1F]/45"></div>
+<!-- Subtle Topographic Lines SVG Overlay (8-10% opacity) -->
+<svg class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-[0.09] text-[#D4AF6A]" preserveAspectRatio="none" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<path d="M-100,200 C300,100 500,450 1300,220" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+<path d="M-100,320 C250,220 600,560 1300,340" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+<path d="M-100,440 C350,380 700,640 1300,480" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+<path d="M-100,560 C400,500 800,720 1300,620" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+<path d="M-100,680 C480,620 900,790 1300,740" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+</svg>
+<div class="absolute inset-y-0 left-12 w-[1px] bg-gradient-to-b from-transparent via-gold/15 to-transparent pointer-events-none hidden md:block"></div><div class="absolute inset-y-0 right-12 w-[1px] bg-gradient-to-b from-transparent via-gold/15 to-transparent pointer-events-none hidden md:block"></div></div>
+<!-- Hero Content: Left-aligned -->
+<div class="relative z-10 max-w-6xl mx-auto w-full">
+<div class="max-w-3xl text-left flex flex-col items-start">
+<p class="font-serif text-2xl md:text-3xl text-gold font-normal italic mb-6">
+        Être avant de faire.
+      </p>
+<h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.12] tracking-normal text-[#F7F3EA] mb-8">
+        Faire grandir sa mission sans se perdre soi-même.
+      </h1>
+<p class="text-[17px] md:text-[18px] text-white/90 leading-relaxed font-light max-w-2xl mb-10">
+        Un espace confidentiel pour prendre du recul, clarifier ce qui compte vraiment et retrouver ton souffle.
+      </p>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+<a class="bg-gold hover:bg-goldHover text-night font-medium text-[16px] px-8 py-3.5 rounded-full transition-all duration-300 text-center" href="#contact">
+          Réserver un appel
+        </a>
+<a class="text-white/85 hover:text-white text-[15px] px-6 py-3.5 rounded-full transition-colors flex items-center justify-center gap-2 border border-white/20 hover:border-white/40" href="#mon-parcours">
+          Découvrir la démarche
+          <span class="material-symbols-outlined text-base">south</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. LE CONSTAT (Warm off-white) with cropped minimal gold sun outline -->
+<section class="relative py-24 md:py-32 px-6 bg-sand text-textDark border-b border-sandBorder/60 overflow-hidden">
+<!-- Minimalist thin gold circle cropped on section edge -->
+<div class="absolute -right-32 -bottom-32 w-96 h-96 rounded-full border border-gold/25 pointer-events-none"></div>
+<div class="relative z-10 max-w-4xl mx-auto text-center">
+<div class="w-12 h-[1px] bg-gold mx-auto mb-8"></div>
+<h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-textDark leading-snug max-w-3xl mx-auto mb-8">
+        Tu as beaucoup donné pour construire ta réussite. Et si l'équilibre n'impliquait pas de tout remettre en question ?
+      </h2>
+<p class="text-[17px] md:text-[18px] text-textMuted leading-relaxed max-w-2xl mx-auto font-normal">
+        Quand chaque décision compte et que le quotidien s'accélère, il devient rare de s'accorder un vrai temps de pause. Prendre du recul ne signifie pas ralentir par faiblesse, mais choisir lucidement la direction de son énergie.
+      </p>
+</div>
+<div class="absolute inset-y-0 left-1/4 w-[1px] bg-gradient-to-b from-transparent via-gold/15 to-transparent pointer-events-none hidden md:block"></div><div class="absolute inset-y-0 right-1/4 w-[1px] bg-gradient-to-b from-transparent via-gold/15 to-transparent pointer-events-none hidden md:block"></div></section>
+<!-- Hand-drawn delicate gold squiggle bridge between Constat and Mon Parcours -->
+<div class="relative w-full h-12 overflow-hidden bg-sand flex justify-center items-center pointer-events-none">
+<svg class="w-48 h-6 text-gold/30" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 200 24">
+<path d="M0 12 Q 25 3, 50 12 T 100 12 T 150 12 T 200 12" stroke-linecap="round"></path>
+</svg>
+</div>
+<!-- 3. MON PARCOURS (First-Person narrative by Amar + Arched Portrait) -->
+<section class="py-20 md:py-28 px-6 bg-sand text-textDark relative" id="mon-parcours">
+<div class="max-w-6xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Portrait Column (Soft Arch container with warm organic backdrop) -->
+<div class="lg:col-span-5 flex justify-center">
+<div class="relative w-full max-w-[340px] sm:max-w-[380px]">
+<!-- Soft organic warm background shape -->
+<div class="absolute -inset-4 bg-sandCard rounded-t-full rounded-b-4xl transform -rotate-1 pointer-events-none"></div>
+<!-- Arched image frame -->
+<div class="relative rounded-t-full rounded-b-4xl overflow-hidden shadow-sm border border-sandBorder bg-sandCard">
+<img alt="Amar Bourahla" class="w-full h-auto object-cover object-top aspect-[3/4]" src="https://lh3.googleusercontent.com/aida/AEtjO1WGoCEE8pzqfnQH0dANuRsJaIwsWTbUZAs13Y0LG-IWbPA1i-bxkP6VcuOETqYZLC5RirEEYkklOg2g4CEowWccSA_gdmkPjPfJbVg-nPQJ5eLD93SqQrCKBXOL0lK6Xzz7c77rQiVtSjRYh7kH0QBG5Pv8lAqujBxxdjs-2eQNe3hBogIGoeV1nCuSwitC4NFAWpbos2jgUe6_m7-bd8aRht5ToKYN9f1XN1UHdF6w4_PyhhtZ-fCAhg0">
+</div>
+<!-- Discrete portrait caption -->
+<div class="mt-4 text-center">
+<p class="font-serif text-xl text-textDark font-normal">Amar Bourahla</p>
+<p class="text-sm text-textMuted mt-0.5">Valenciennes &amp; à distance</p>
+</div>
+</div>
+</div>
+<!-- Narrative Column -->
+<div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+<span class="text-textMuted text-sm font-medium">Mon parcours</span>
+<h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-textDark leading-tight">
+            Accompagner avec le cœur du vécu.
+          </h2>
+<div class="w-12 h-[1px] bg-gold"></div>
+<div class="space-y-5 text-[17px] md:text-[18px] text-textMuted leading-relaxed">
+<p class="">
+              J'ai passé plus de dix ans au cœur des startups, incubateurs et projets intenses. J'ai connu l'adrénaline des lancements, mais aussi l'épuisement silencieux qui s'installe quand la pression prend toute la place.
+            </p>
+<p class="">
+              Aujourd'hui, je t'accompagne à clarifier tes priorités, retrouver de la sérénité et décider avec lucidité.
+            </p>
+</div>
+<!-- Featured Citation Card -->
+<div class="mt-4 p-8 bg-sandCard rounded-3xl border border-sandBorder">
+<p class="font-serif text-2xl md:text-3xl text-textDark font-normal leading-relaxed">
+              « Notre manière de faire dépend profondément de notre manière d'être. »
+            </p>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute inset-y-0 right-10 w-[1px] bg-gradient-to-b from-transparent via-gold/15 to-transparent pointer-events-none hidden lg:block"></div><div class="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-gold/15 to-transparent pointer-events-none"></div></section>
+<!-- 4. POUR QUI (Warm off-white) -->
+<section class="py-20 md:py-28 px-6 bg-sand border-t border-sandBorder/60 relative">
+<div class="max-w-4xl mx-auto">
+<div class="bg-sandCard rounded-4xl p-8 sm:p-12 md:p-16 border border-sandBorder text-center relative overflow-hidden">
+<!-- Soft ambient graphic aura -->
+<div class="absolute -left-20 -top-20 w-60 h-60 rounded-full border border-gold/15 pointer-events-none"></div>
+<span class="text-textMuted text-sm font-medium mb-3 block">Pour qui</span>
+<h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-textDark leading-snug mb-6">
+          Pour les entrepreneurs et dirigeants qui portent beaucoup sur leurs épaules.
+        </h2>
+<div class="w-12 h-[1px] bg-gold mx-auto mb-6"></div>
+<p class="text-[17px] md:text-[18px] text-textMuted leading-relaxed max-w-2xl mx-auto">
+          Pour celles et ceux qui souhaitent grandir durablement sans sacrifier leur équilibre, retrouver un espace d'écoute véritable et avancer avec clarté d'esprit.
+        </p>
+<div class="mt-8 flex justify-center">
+<a class="inline-flex items-center gap-2 text-textDark hover:text-gold font-medium text-[16px] transition-colors border-b border-textDark/30 pb-0.5 hover:border-gold" href="#contact">
+            Prendre un premier contact
+            <span class="material-symbols-outlined text-base">east</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. LA MÉTHODE EN 7 ÉTAPES (Warm off-white background, asymmetric organic flow, faint ghost numerals, connecting hairline) -->
+<section class="relative py-28 md:py-40 px-6 bg-sand text-textDark border-t border-sandBorder/60 overflow-hidden" id="la-methode">
+<!-- Topographic background lines in gold (8-10% opacity) -->
+<svg class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-[0.08] text-gold" preserveAspectRatio="none" viewBox="0 0 1200 1400" xmlns="http://www.w3.org/2000/svg">
+<path d="M-50,150 C300,50 600,300 1250,180" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+<path d="M-50,380 C250,260 700,550 1250,420" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+<path d="M-50,620 C400,520 750,800 1250,680" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+<path d="M-50,860 C350,780 800,1050 1250,920" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+<path d="M-50,1100 C500,1000 850,1280 1250,1150" fill="none" stroke="currentColor" stroke-width="1.2"></path>
+</svg>
+<div class="relative z-10 max-w-5xl mx-auto">
+<div class="text-center mb-24">
+<span class="text-textMuted text-sm font-medium mb-2 block">Cheminement</span>
+<h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-textDark">
+      La méthode en 7 étapes
+    </h2>
+<div class="w-12 h-[1px] bg-gold mx-auto my-6"></div>
+<p class="text-[17px] md:text-[18px] text-textMuted max-w-xl mx-auto leading-relaxed">
+      Un fil conducteur progressif pour déposer le trop-plein, faire le point et ancrer une sérénité durable.
+    </p>
+</div>
+<!-- Vertical Asymmetric Flow Container -->
+<div class="relative">
+<!-- Connecting delicate hairline running vertically -->
+<div class="hidden md:block absolute left-1/2 top-4 bottom-12 -translate-x-1/2 w-[1px] bg-gradient-to-b from-transparent via-sandBorder to-transparent pointer-events-none"></div>
+<div class="space-y-16 md:space-y-24">
+<!-- Step 1: Left-aligned -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-start">
+<div class="relative w-full md:w-[460px] bg-sandCard/70 backdrop-blur-sm rounded-3xl p-8 border border-sandBorder hover:border-gold/50 transition-all duration-300 overflow-hidden">
+<!-- Large ghost watermark numeral -->
+<span class="absolute -right-2 -bottom-6 font-serif text-[110px] leading-none text-gold opacity-[0.08] select-none pointer-events-none font-light">1</span>
+<div class="relative z-10 flex items-baseline gap-4 mb-2">
+<span class="font-serif text-3xl text-gold font-light">01.</span>
+<h3 class="font-serif text-2xl sm:text-3xl text-textDark font-normal">Besoins</h3>
+</div>
+<p class="relative z-10 text-[16px] md:text-[17px] text-textMuted leading-relaxed pl-10 font-normal">
+            Identifier ce qui nourrit ton énergie vitale.
+          </p>
+</div>
+</div>
+<!-- Step 2: Center-Right offset -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-end">
+<div class="relative w-full md:w-[480px] md:mr-8 bg-sandCard/70 backdrop-blur-sm rounded-3xl p-8 border border-sandBorder hover:border-gold/50 transition-all duration-300 overflow-hidden">
+<!-- Large ghost watermark numeral -->
+<span class="absolute -right-2 -bottom-6 font-serif text-[110px] leading-none text-gold opacity-[0.08] select-none pointer-events-none font-light">2</span>
+<div class="relative z-10 flex items-baseline gap-4 mb-2">
+<span class="font-serif text-3xl text-gold font-light">02.</span>
+<h3 class="font-serif text-2xl sm:text-3xl text-textDark font-normal">Limites</h3>
+</div>
+<p class="relative z-10 text-[16px] md:text-[17px] text-textMuted leading-relaxed pl-10 font-normal">
+            Poser un cadre sain et protecteur.
+          </p>
+</div>
+</div>
+<!-- Step 3: Shifted Center-Left -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-start md:pl-12">
+<div class="relative w-full md:w-[460px] bg-sandCard/70 backdrop-blur-sm rounded-3xl p-8 border border-sandBorder hover:border-gold/50 transition-all duration-300 overflow-hidden">
+<!-- Large ghost watermark numeral -->
+<span class="absolute -right-2 -bottom-6 font-serif text-[110px] leading-none text-gold opacity-[0.08] select-none pointer-events-none font-light">3</span>
+<div class="relative z-10 flex items-baseline gap-4 mb-2">
+<span class="font-serif text-3xl text-gold font-light">03.</span>
+<h3 class="font-serif text-2xl sm:text-3xl text-textDark font-normal">Priorités</h3>
+</div>
+<p class="relative z-10 text-[16px] md:text-[17px] text-textMuted leading-relaxed pl-10 font-normal">
+            Éliminer l'inutile pour te concentrer sur l'essentiel.
+          </p>
+</div>
+</div>
+<!-- Step 4: Indented Right -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-end">
+<div class="relative w-full md:w-[470px] bg-sandCard/70 backdrop-blur-sm rounded-3xl p-8 border border-sandBorder hover:border-gold/50 transition-all duration-300 overflow-hidden">
+<!-- Large ghost watermark numeral -->
+<span class="absolute -right-2 -bottom-6 font-serif text-[110px] leading-none text-gold opacity-[0.08] select-none pointer-events-none font-light">4</span>
+<div class="relative z-10 flex items-baseline gap-4 mb-2">
+<span class="font-serif text-3xl text-gold font-light">04.</span>
+<h3 class="font-serif text-2xl sm:text-3xl text-textDark font-normal">Discernement</h3>
+</div>
+<p class="relative z-10 text-[16px] md:text-[17px] text-textMuted leading-relaxed pl-10 font-normal">
+            Observer la situation avec calme et lucidité.
+          </p>
+</div>
+</div>
+<!-- Step 5: Centered / Slight Left -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-start md:pl-20">
+<div class="relative w-full md:w-[460px] bg-sandCard/70 backdrop-blur-sm rounded-3xl p-8 border border-sandBorder hover:border-gold/50 transition-all duration-300 overflow-hidden">
+<!-- Large ghost watermark numeral -->
+<span class="absolute -right-2 -bottom-6 font-serif text-[110px] leading-none text-gold opacity-[0.08] select-none pointer-events-none font-light">5</span>
+<div class="relative z-10 flex items-baseline gap-4 mb-2">
+<span class="font-serif text-3xl text-gold font-light">05.</span>
+<h3 class="font-serif text-2xl sm:text-3xl text-textDark font-normal">Choix</h3>
+</div>
+<p class="relative z-10 text-[16px] md:text-[17px] text-textMuted leading-relaxed pl-10 font-normal">
+            Prendre des décisions alignées avec tes valeurs.
+          </p>
+</div>
+</div>
+<!-- Step 6: Placeholder / Right -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-end md:pr-10">
+<div class="relative w-full md:w-[480px] bg-sandCard/40 border border-dashed border-sandBorder/90 rounded-3xl p-8 hover:border-gold/40 transition-all duration-300 overflow-hidden">
+<!-- Large ghost watermark numeral -->
+<span class="absolute -right-2 -bottom-6 font-serif text-[110px] leading-none text-gold opacity-[0.06] select-none pointer-events-none font-light">6</span>
+<div class="relative z-10 flex items-baseline gap-4 mb-2">
+<span class="font-serif text-3xl text-gold/70 font-light">06.</span>
+<h3 class="font-serif text-2xl sm:text-3xl text-textDark/80 font-normal italic">À définir</h3>
+</div>
+<p class="relative z-10 text-[16px] md:text-[17px] text-textMuted/80 leading-relaxed pl-10 font-light">
+            Étape personnalisée selon ta trajectoire et tes enjeux propres.
+          </p>
+</div>
+</div>
+<!-- Step 7: Placeholder / Left -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-start md:pl-6">
+<div class="relative w-full md:w-[480px] bg-sandCard/40 border border-dashed border-sandBorder/90 rounded-3xl p-8 hover:border-gold/40 transition-all duration-300 overflow-hidden">
+<!-- Large ghost watermark numeral -->
+<span class="absolute -right-2 -bottom-6 font-serif text-[110px] leading-none text-gold opacity-[0.06] select-none pointer-events-none font-light">7</span>
+<div class="relative z-10 flex items-baseline gap-4 mb-2">
+<span class="font-serif text-3xl text-gold/70 font-light">07.</span>
+<h3 class="font-serif text-2xl sm:text-3xl text-textDark/80 font-normal italic">À définir</h3>
+</div>
+<p class="relative z-10 text-[16px] md:text-[17px] text-textMuted/80 leading-relaxed pl-10 font-light">
+            Étape personnalisée selon ta trajectoire et tes enjeux propres.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. ACCOMPAGNEMENTS (2 formats on warm off-white) -->
+<section class="py-24 md:py-32 px-6 bg-sand text-textDark border-t border-sandBorder/60 relative" id="accompagnements">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-16">
+<span class="text-textMuted text-sm font-medium mb-2 block">Formats</span>
+<h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-textDark">
+          Deux accompagnements sur mesure
+        </h2>
+<div class="w-12 h-[1px] bg-gold mx-auto my-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Format 1 -->
+<div class="bg-sandCard rounded-3xl p-8 sm:p-10 border border-sandBorder flex flex-col justify-between hover:border-gold/60 transition-all duration-300">
+<div>
+<h3 class="font-serif text-2xl sm:text-3xl text-textDark font-normal mb-4">
+              Coaching de dirigeants
+            </h3>
+<p class="text-[17px] text-textMuted leading-relaxed mb-6 font-normal">
+              Clarifier ta vision, alléger ta charge mentale et guider tes équipes avec sérénité.
+            </p>
+</div>
+<div class="pt-6 border-t border-sandBorder">
+<a class="inline-flex items-center gap-2 text-textDark hover:text-gold font-medium text-[15px] transition-colors" href="#contact">
+              En savoir plus
+              <span class="material-symbols-outlined text-base">east</span>
+</a>
+</div>
+</div>
+<!-- Format 2 -->
+<div class="bg-sandCard rounded-3xl p-8 sm:p-10 border border-sandBorder flex flex-col justify-between hover:border-gold/60 transition-all duration-300">
+<div>
+<h3 class="font-serif text-2xl sm:text-3xl text-textDark font-normal mb-4">
+              Coaching de vie &amp; équilibre
+            </h3>
+<p class="text-[17px] text-textMuted leading-relaxed mb-6 font-normal">
+              Retrouver ton temps, préserver ta santé et réaligner tes choix personnels.
+            </p>
+</div>
+<div class="pt-6 border-t border-sandBorder">
+<a class="inline-flex items-center gap-2 text-textDark hover:text-gold font-medium text-[15px] transition-colors" href="#contact">
+              En savoir plus
+              <span class="material-symbols-outlined text-base">east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute inset-y-0 left-12 w-[1px] bg-gradient-to-b from-transparent via-gold/15 to-transparent pointer-events-none hidden lg:block"></div><div class="absolute inset-y-0 right-12 w-[1px] bg-gradient-to-b from-transparent via-gold/15 to-transparent pointer-events-none hidden lg:block"></div></section>
+<!-- 7. CONTACT & DIRECT BOOKING (Warm off-white) -->
+<section class="py-24 md:py-32 px-6 bg-sand text-textDark border-t border-sandBorder/60" id="contact">
+<div class="max-w-4xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left info with direct booking CTA -->
+<div class="lg:col-span-5 space-y-6">
+<span class="text-textMuted text-sm font-medium block">Premier échange</span>
+<h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-textDark leading-tight">
+            Engager la conversation.
+          </h2>
+<div class="w-12 h-[1px] bg-gold"></div>
+<p class="text-[17px] text-textMuted leading-relaxed font-normal">
+            Un premier échange informel de 45 minutes pour faire connaissance, comprendre ta situation et voir comment avancer ensemble.
+          </p>
+<!-- Dual Option: Direct Calendar Booking -->
+<div class="pt-2">
+<a class="inline-flex items-center justify-center gap-2 w-full bg-gold hover:bg-goldHover text-night font-medium text-[15px] px-6 py-3.5 rounded-full transition-all duration-300 shadow-sm" href="https://calendly.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+    Réserver un créneau direct
+  </a>
+<p class="text-xs text-textMuted text-center mt-2">Visio 45 min offerte sans engagement</p>
+</div>
+<div class="pt-4 space-y-3 text-[15px] text-textMuted border-t border-sandBorder/60">
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gold text-lg">location_on</span>
+              Valenciennes &amp; à distance
+            </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gold text-lg">schedule</span>
+              Sur rendez-vous
+            </p>
+</div>
+</div>
+<!-- Right form -->
+<div class="lg:col-span-7 bg-sandCard rounded-3xl p-8 sm:p-10 border border-sandBorder">
+<h3 class="font-serif text-2xl text-textDark font-normal mb-6">Ou laisse-moi un message</h3>
+<form class="space-y-5" onsubmit="event.preventDefault(); document.getElementById('confirmationBox').classList.remove('hidden'); this.reset();">
+<div>
+<label class="block text-sm text-textDark mb-1.5 font-medium">Ton prénom et nom</label>
+<input class="w-full bg-white border border-sandBorder rounded-2xl px-4 py-3 text-textDark placeholder:text-textMuted/50 focus:outline-none focus:border-gold transition-colors text-[15px]" placeholder="Alexandre" required="" type="text">
+</div>
+<div>
+<label class="block text-sm text-textDark mb-1.5 font-medium">Adresse email</label>
+<input class="w-full bg-white border border-sandBorder rounded-2xl px-4 py-3 text-textDark placeholder:text-textMuted/50 focus:outline-none focus:border-gold transition-colors text-[15px]" placeholder="alexandre@domaine.com" required="" type="email">
+</div>
+<div>
+<label class="block text-sm text-textDark mb-1.5 font-medium">Quel est ton besoin aujourd'hui ?</label>
+<textarea class="w-full bg-white border border-sandBorder rounded-2xl px-4 py-3 text-textDark placeholder:text-textMuted/50 focus:outline-none focus:border-gold transition-colors text-[15px] resize-none" placeholder="Quelques mots sur ce que tu traverses ou souhaites clarifier..." rows="3"></textarea>
+</div>
+<button class="w-full bg-night hover:bg-night/90 text-white font-medium text-[16px] px-8 py-3.5 rounded-full transition-all duration-300" type="submit">
+              Envoyer ma demande
+            </button>
+</form>
+<div class="hidden mt-4 p-4 bg-white rounded-2xl border border-gold/40 text-center text-sm text-textDark" id="confirmationBox">
+            Merci pour ton message. Je reviens vers toi très rapidement.
+          </div>
+</div>
+</div>
+</div>
+<div class="absolute inset-y-0 left-8 w-[1px] bg-gradient-to-b from-transparent via-gold/15 to-transparent pointer-events-none hidden lg:block"></div><div class="absolute inset-y-0 right-8 w-[1px] bg-gradient-to-b from-transparent via-gold/15 to-transparent pointer-events-none hidden lg:block"></div><div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-gold/25 to-transparent pointer-events-none"></div></section>
+<!-- 8. FOOTER (Night blue with gold SHIFT logo) -->
+<footer class="bg-night text-[#F7F3EA] py-16 px-6 border-t border-white/10">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+<div>
+<!-- Gold SHIFT Logo in footer -->
+<span class="font-serif text-2xl text-gold font-medium tracking-normal block mx-auto md:mx-0 mb-2">SHIFT</span>
+<p class="text-sm text-white/60">Valenciennes &amp; à distance</p>
+</div>
+<!-- Social Links -->
+<div class="flex items-center gap-6 text-[15px] text-white/80">
+<a class="hover:text-gold transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+          LinkedIn
+        </a>
+<span class="text-white/20">•</span>
+<a class="hover:text-gold transition-colors" href="https://instagram.com/amarbourahla_" rel="noopener noreferrer" target="_blank">
+          Instagram @amarbourahla_
+        </a>
+</div>
+<div class="text-xs text-white/40">
+        © SHIFT — Tous droits réservés.
+      </div>
+</div>
+</footer>
+
+
+
+
+</body></html>
